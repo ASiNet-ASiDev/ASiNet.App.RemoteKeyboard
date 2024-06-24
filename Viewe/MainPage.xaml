@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ads="clr-namespace:ASiNet.Yandex.Ads;assembly=ASiNet.Yandex.Ads"
+             xmlns:model="clr-namespace:ASiNet.App.RemoteKeyboard.Models"
+             xmlns:vm="clr-namespace:ASiNet.App.RemoteKeyboard.VieweModels"
+             ImportCommand="{Binding ImportCommand}"
+             x:Class="ASiNet.App.RemoteKeyboard.Viewe.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainPageVM/>
+    </ContentPage.BindingContext>
+    
+    <Grid RowDefinitions="50,*,105">
+        <ads:Banner AdHeight="50" AdUnitId="R-M-9026925-1"/>
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Keyboards}" SelectedItem="{Binding Selected}" SelectionMode="Single" Margin="5">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type model:KeyboardPreset}">
+                    <Border StrokeShape="{StaticResource UIElementsStrokeShape}">
+                        <Grid ColumnDefinitions="1.5*,*" RowDefinitions="50,50" ColumnSpacing="5" RowSpacing="5" Margin="10">
+                            <Label Text="{Binding Title}" VerticalOptions="Center" FontSize="20"/>
+                            <Label Grid.Column="1" Text="{Binding Author}" VerticalOptions="Center" FontSize="20"/>
+                            <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Description}"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Grid Grid.Row="2" ColumnDefinitions="50,50,50,50,50,50" RowDefinitions="50,50" ColumnSpacing="5" RowSpacing="5" HorizontalOptions="Center">
+
+            <Button Text="" Grid.Column="2" FontFamily="A6" Command="{Binding ExportCommand}" IsEnabled="{Binding IsSelected}" WidthRequest="50" HeightRequest="50"/>
+            <Button Text="" Grid.Column="3" FontFamily="A6" Pressed="Import_Button_Pressed" WidthRequest="50" HeightRequest="50"/>
+
+            <Button Grid.Row="1" Grid.Column="0" Text="+" FontFamily="A6" WidthRequest="50" HeightRequest="50" Command="{Binding AddCommand}"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="" FontFamily="A6" WidthRequest="50" HeightRequest="50" Command="{Binding RemoveCommand}" IsEnabled="{Binding IsSelected}"/>
+            <Button Grid.Row="1" Grid.Column="2" Text="" FontFamily="A6" WidthRequest="50" HeightRequest="50" Command="{Binding EditCommand}" IsEnabled="{Binding IsSelected}"/>
+            <Button Grid.Row="1" Grid.Column="3" Text="" FontFamily="A6" WidthRequest="50" HeightRequest="50" Command="{Binding ShowCommand}" IsEnabled="{Binding IsSelected}"/>
+            <Button Grid.Row="1" Grid.Column="4" Text="" FontFamily="A6" WidthRequest="50" HeightRequest="50" Command="{Binding RefreshCommand}"/>
+            <Button Grid.Row="1" Grid.Column="5" Text="" FontFamily="A6" WidthRequest="50" HeightRequest="50" Command="{Binding SettingsCommand}"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>

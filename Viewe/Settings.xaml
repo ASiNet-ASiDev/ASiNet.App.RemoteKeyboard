@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:str="clr-namespace:ASiNet.App.RemoteKeyboard.Resources.Langs"
+             x:Class="ASiNet.App.RemoteKeyboard.Viewe.Settings">
+    <Grid ColumnDefinitions="50,*" RowDefinitions="50,50,50,50,50,50,50,50,*" RowSpacing="5">
+        <CheckBox x:Name="AutoConnect"/>
+        <Label Grid.Column="1" Text="Auto connect" VerticalOptions="Center"/>
+
+        <Entry x:Name="Address" Grid.Row="1" Grid.ColumnSpan="2" Placeholder="{x:Static str:AppResources.SettingsAddressPlaceholder}"/>
+        <Entry x:Name="Port" Grid.Row="2" Grid.ColumnSpan="2" Placeholder="{x:Static str:AppResources.SettingsPortPlaceholder}"/>
+        <Entry x:Name="Login" Grid.Row="3" Grid.ColumnSpan="2" Placeholder="{x:Static str:AppResources.SettingsLoginPlaceholder}"/>
+        <Entry x:Name="Password" Grid.Row="4" Grid.ColumnSpan="2" Placeholder="{x:Static str:AppResources.SettingsPasswordPlaceholder}"/>
+        <Button Grid.Row="5" Grid.ColumnSpan="2" Text="{x:Static str:AppResources.SettingsConnectButtonText}" Pressed="Button_Pressed"/>
+        <Label x:Name="ConnectingResult" Grid.Row="6" Grid.ColumnSpan="2"/>
+        <HorizontalStackLayout Grid.Row="7" Grid.ColumnSpan="2" Margin="5" HorizontalOptions="Center" Spacing="25">
+            <Label x:Name="Website" Text="" FontSize="40" FontFamily="A6">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Website_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label x:Name="Telegram" Text="" FontSize="40" FontFamily="A6-B">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Telegram_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label x:Name="YouTube" Text="" FontSize="40" FontFamily="A6-B">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="YouTube_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </HorizontalStackLayout>
+        <Label Grid.Row="8" Grid.ColumnSpan="2" Margin="5" Text="{x:Static str:AppResources.SettingsInfoLabel}"/>
+    </Grid>
+</ContentPage>

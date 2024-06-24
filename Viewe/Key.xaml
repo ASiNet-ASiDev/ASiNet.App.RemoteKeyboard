@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Button xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:vm="clr-namespace:ASiNet.App.RemoteKeyboard.VieweModels"
+        x:Class="ASiNet.App.RemoteKeyboard.Viewe.Key"
+        x:DataType="{x:Type vm:KeyPresetVM}"
+        Text="{Binding VisualText}"
+        CommandParameter="{Binding .}"
+        FontSize="22"
+        Padding="0"
+        FontFamily="A6">
+</Button>

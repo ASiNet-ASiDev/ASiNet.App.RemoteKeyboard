@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:vm="clr-namespace:ASiNet.App.RemoteKeyboard.VieweModels"
+               xmlns:str="clr-namespace:ASiNet.App.RemoteKeyboard.Resources.Langs"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               x:Class="ASiNet.App.RemoteKeyboard.Viewe.KeySelector"
+               CanBeDismissedByTappingOutsideOfPopup="False">
+    <toolkit:Popup.BindingContext>
+        <vm:KeySelectorVM/>
+    </toolkit:Popup.BindingContext>
+    <Grid RowDefinitions="50,200,50" RowSpacing="5" MinimumWidthRequest="150" BackgroundColor="{AppThemeBinding Light={StaticResource WCPBacgroundLightColor}, Dark={StaticResource WCPBacgroundDarkColor}}" Padding="10">
+        <Entry Placeholder="{x:Static str:AppResources.KeySelectorFilterPlaceholder}" Text="{Binding Filter}" FontSize="Body"/>
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Keys}" SelectionMode="Single" SelectedItem="{Binding Selected}">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="5" Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding .}" FontSize="Body"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Grid.Row="3" Text="{x:Static str:AppResources.KeySelectorOkButtonText}" Pressed="Button_Pressed"/>
+    </Grid>
+</toolkit:Popup>

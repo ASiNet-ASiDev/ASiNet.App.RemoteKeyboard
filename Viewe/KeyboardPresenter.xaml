@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ads="clr-namespace:ASiNet.Yandex.Ads;assembly=ASiNet.Yandex.Ads"
+             xmlns:local="clr-namespace:ASiNet.App.RemoteKeyboard.Viewe"
+             xmlns:vm="clr-namespace:ASiNet.App.RemoteKeyboard.VieweModels"
+             x:Class="ASiNet.App.RemoteKeyboard.Viewe.KeyboardPresenter"
+             x:DataType="{x:Type vm:KeyboardPresenterVM}">
+    <Grid RowSpacing="5" RowDefinitions="100,*,50,Auto,50">
+        <ads:Banner AdHeight="100" AdUnitId="R-M-9026925-2"/>
+        
+        <local:KeyboardControl Grid.Row="3" KeyboardPreset="{Binding Preset}" KeyCommand="{Binding KeyPressedCommand}" HorizontalOptions="Center"/>
+
+        <ads:Banner AdHeight="50" Grid.Row="4" AdUnitId="R-M-9026925-3"/>
+    </Grid>
+</ContentPage>

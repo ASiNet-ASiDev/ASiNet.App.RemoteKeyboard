@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:str="clr-namespace:ASiNet.App.RemoteKeyboard.Resources.Langs"
+               xmlns:vm="clr-namespace:ASiNet.App.RemoteKeyboard.VieweModels"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               x:Class="ASiNet.App.RemoteKeyboard.Viewe.SavePresetQuest"
+               x:DataType="{x:Type vm:KeyboardBuilderVM}"
+               CanBeDismissedByTappingOutsideOfPopup="False"
+               SaveCommand="{Binding SaveKeyboardCommand}">
+    <Grid RowDefinitions="50,50,50,50,50" ColumnSpacing="5" MinimumWidthRequest="250" BackgroundColor="{AppThemeBinding Light={StaticResource WCPBacgroundLightColor}, Dark={StaticResource WCPBacgroundDarkColor}}" Padding="10">
+        <Label Text="{x:Static str:AppResources.SaveKeyboardQuestTitleText}" VerticalOptions="Center" FontSize="22"/>
+        <Editor x:Name="Title" Placeholder="{x:Static str:AppResources.SaveKeyboardQuestTitlePlaceholder}" Grid.Row="1"/>
+        <Editor x:Name="Description" Grid.Row="2" Placeholder="{x:Static str:AppResources.SaveKeyboardQuestDescriptionPlaceholder}"/>
+        <Editor x:Name="Author" Grid.Row="3" Placeholder="{x:Static str:AppResources.SaveKeyboardQuestAuthorPlaceholder}"/>
+        <Grid Grid.Row="4" ColumnDefinitions="*,*" ColumnSpacing="5">
+            <Button Text="{x:Static str:AppResources.SaveKeyboardSeveButtonText}" Pressed="Save"/>
+
+            <Button Grid.Column="1" Text="{x:Static str:AppResources.SaveKeyboardCancelButtonText}" Pressed="Cancel"/>
+        </Grid>
+    </Grid>
+</toolkit:Popup>

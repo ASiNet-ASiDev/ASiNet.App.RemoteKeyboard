@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ASiNet.App.RemoteKeyboard.VieweModels"
+             xmlns:local="clr-namespace:ASiNet.App.RemoteKeyboard.Viewe"
+             x:Class="ASiNet.App.RemoteKeyboard.Viewe.KeyboardBuilder"
+             ClosePageCommand="{Binding CreateBackupCommand}"
+             PresetAuthor="{Binding Author}"
+             PresetDescription="{Binding Description}"
+             PresetTitle="{Binding Title}"
+             x:DataType="{x:Type vm:KeyboardBuilderVM}">
+    <Grid RowDefinitions="50,*,Auto" RowSpacing="5">
+        <Grid ColumnDefinitions="*,50,50" ColumnSpacing="5">
+            <Button Text="" Grid.Column="1" FontFamily="A6" Pressed="Cancel"/>
+            <Button Text="" Grid.Column="2" FontFamily="A6" Pressed="Save"/>
+        </Grid>
+        <Grid ColumnDefinitions="22,22,22,22,22,22,22,22,22,22,22,22,22,22" 
+              RowDefinitions="22,22,22,22,22,22,22,22,22,22,22,22,22,22"
+              ColumnSpacing="3"
+              RowSpacing="3"
+              Padding="2"
+              WidthRequest="350" Grid.Row="1"
+              HeightRequest="350" ZIndex="0" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="0:0" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="0:0"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="4:0" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="4:0"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="8" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="8:0" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="8:0"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="12" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="12:0" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="12:0"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+
+            <Label Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="2:2" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="2:2"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="6:2" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="6:2"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="10" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="10:2" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="10:2"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="0:4" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="0:4"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="4" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="4:4" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="4:4"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="8" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="8:4" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="8:4"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="12" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="12:4" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="12:4"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+
+            <Label Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="2:6" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="2:6"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="6" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="6:6" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="6:6"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="10" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="10:6" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="10:6"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="0:8" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="0:8"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="4" Grid.Row="8" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="4:8" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="4:8"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="8" Grid.Row="8" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="8:8" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="8:8"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="12" Grid.Row="8" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="12:8" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="12:8"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+
+            <Label Grid.Column="2" Grid.Row="10" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="2:10" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="2:10"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="6" Grid.Row="10" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="6:10" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="6:10"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="10" Grid.Row="10" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="10:10" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="10:10"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Column="0" Grid.Row="12" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="0:12" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="0:12"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="4" Grid.Row="12" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="4:12" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="4:12"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="8" Grid.Row="12" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="8:12" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="8:12"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="12" Grid.Row="12" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="12:12" TextColor="{StaticResource Gray600}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SetPosXYCommand}" CommandParameter="12:12"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+        <local:KeyboardControl Grid.Row="1" ZIndex="1" Keys="{Binding Keys}" HorizontalOptions="Center" VerticalOptions="Center" KeyCommand="{Binding SelectKeyCommand}"/>
+
+        <Grid Grid.Row="2" RowDefinitions="50,50,50,50" RowSpacing="5">
+
+            <Grid ColumnDefinitions="25,*" VerticalOptions="Center">
+                <Label Text="{Binding SelectedKey.VisualText}" FontFamily="A6" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Grid.Column="1" Text="{Binding SelectedKeyName, StringFormat='({0})'}" FontSize="15" VerticalOptions="Center"/>
+            </Grid>
+
+            <Grid Grid.Row="1" ColumnDefinitions="*,*,*,*" ColumnSpacing="5">
+                <Button Grid.Column="0" Text="+" FontFamily="A6" HeightRequest="50" 
+                        Command="{Binding AddButtonCommand}"/>
+                <Button Grid.Column="1" Text="" FontFamily="A6" HeightRequest="50" 
+                        Command="{Binding RemoveButtonCommand}" 
+                        IsEnabled="{Binding AllowModify}"/>
+                <Button Grid.Column="2" Text="" FontFamily="A6" HeightRequest="50" 
+                        Command="{Binding UnsellectButtonCommand}" 
+                        IsEnabled="{Binding AllowModify}"/>
+                <Button Grid.Column="3" Text="" FontFamily="A6" HeightRequest="50" 
+                        Pressed="OpenKeySettings"
+                        IsEnabled="{Binding AllowModify}"/>
+            </Grid>
+
+            <Grid Grid.Row="2" ColumnSpacing="3" ColumnDefinitions="*,*,*,*">
+                <Button Grid.Column="0" IsEnabled="{Binding AllowModify}"
+                        Text="" FontFamily="A6"
+                        Command="{Binding MoveXCommand}">
+                    <Button.CommandParameter>
+                        <x:Int32>-1</x:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Grid.Column="1" IsEnabled="{Binding AllowModify}"
+                        Text="" FontFamily="A6"
+                        Command="{Binding MoveXCommand}">
+                    <Button.CommandParameter>
+                        <x:Int32>1</x:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Grid.Column="2" IsEnabled="{Binding AllowModify}"
+                        Text="" FontFamily="A6"
+                        Command="{Binding MoveYCommand}">
+                    <Button.CommandParameter>
+                        <x:Int32>1</x:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Grid.Column="3" IsEnabled="{Binding AllowModify}"
+                        Text="" FontFamily="A6"
+                        Command="{Binding MoveYCommand}">
+                    <Button.CommandParameter>
+                        <x:Int32>-1</x:Int32>
+                    </Button.CommandParameter>
+                </Button>
+            </Grid>
+            <Grid Grid.Row="3" ColumnSpacing="3" ColumnDefinitions="*,*">
+                <Button Grid.Row="2" Grid.Column="0" IsEnabled="{Binding AllowModify}"
+                        Text="{Binding SelectedKey.Preset.SizeX, StringFormat='Width:{0}'}"
+                        Command="{Binding SetSizeXCommand}"/>
+                <Button Grid.Row="2" Grid.Column="1" IsEnabled="{Binding AllowModify}"
+                        Text="{Binding SelectedKey.Preset.SizeY, StringFormat='Height:{0}'}"
+                        Command="{Binding SetSizeYCommand}"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>
